@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>永远在一起</title>
+	<style type="text/css">
+		#imgId{
+			/*height: 100px;*/
+			/*width: 100px;
+			position: absolute;
+			left: 0px;
+			top: 0px;*/
+			width: 72px;
+			height: 72px;
+			border-radius: 50%;
+			background: skyblue;
+			position: absolute;
+			left: 160px;
+			bottom: 160px;
+			text-align: center;
+			line-height: 80px;
+		}
+		#dd{
+			width: 66px;
+			height: 66px;
+			border-radius: 50%;
+			background: pink;
+			position: absolute;
+			left: 160px;
+			bottom: 160px;
+			text-align: center;
+			line-height: 80px;
+
+		}
+		#love{
+			width: 30px;
+			height: 30px;
+			border-radius: 30% 50% 30% 50%;
+			background: red;
+			position: absolute;
+			left: 160px;
+			bottom: 160px;
+			text-align: center;
+			line-height: 30px;
+		}
+		.jia{
+			width: 120px;
+			height: 120px;
+			background-color: rgb(194,127,175);
+			position: absolute;
+			left: 160px;
+			bottom: 160px;
+		}
+		.laojia{
+			width: 120px;
+			height: 120px;
+			background-color: rgb(249,215,103);
+			position: absolute;
+			left: 150px;
+			bottom: 1px;
+		}
+		.niangjia{
+			width: 120px;
+			height: 120px;
+			background-color: rgb(249,215,103);
+			position: absolute;
+			left: 1px;
+			bottom: 150px;
+		}
+		.lvxing{
+			width: 90px;
+			height: 90px;
+			background-color: rgb(167,227,242);
+            position: absolute;
+			right: 10px;
+			top: 10px;
+		}
+		.qian{
+			width: 1000px;
+			height: 200px;
+			background-color: rgba(255,255,0,.3);
+			position: absolute;
+			right: 1px;
+			top: 300px;
+			font-size: 30px;
+		}
+		.youeryuan{
+			width: 120px;
+			height: 120px;
+			background-color: rgb(58,193,126);
+			position: absolute;
+			left: 5px;
+			bottom: 30px;
+			border-radius: 20%;
+			font-size: 20px;
+			text-align: center;
+		}
+		.gongyuan{
+			width: 150px;
+			height: 150px;
+			background-color: rgb(198,232,243);
+			border-radius: 20% 50% 50% 10%;
+			font-size: 20px;
+			text-align: center;
+			position: absolute;
+			left: 148px;
+			bottom: 50px;
+		}
+		.gongyuan2{
+			width: 170px;
+			height: 170px;
+			background-color: rgb(232,101,133);
+			border-radius: 30%;
+			font-size: 20px;
+			text-align: center;
+			position: absolute;
+			left: 720px;
+			bottom: 0px;
+		}
+		.shangchang{
+			width: 136px;
+			height: 130px;
+			background-color: rgb(68,152,146);
+			border-radius: 20%;
+			font-size: 20px;
+			text-align: center;
+			position: absolute;
+			left: 500px;
+			bottom: 20px;
+		}
+		.julebu{
+			width: 130px;
+			height: 130px;
+			background-color: rgb(58,193,126);
+			border-radius: 20% 10% 30% 50%;
+			font-size: 20px;
+			text-align: center;
+			position: absolute;
+			left: 330px;
+			bottom: 60px;
+		}
+	</style>
+</head>
+<body> 
+	<div class="jia">家🏠</div>
+	<div class="lvxing">旅行✈️</div>
+	<div class="niangjia">娘家🏠</div>
+	<div class="laojia">老家🏠</div>
+	<div class="qian">家族产业💰
+	 <div class="gongyuan">公园⛲️</div>
+	 <div class="shangchang">商场👔</div>
+	 <div class="youeryuan">幼儿园🏫</div>
+	 <div class="julebu">舞蹈俱乐部🏫</div>
+	 <div class="gongyuan2">公园⛲️</div>
+	</div>
+	    <div id="imgId">鹏鹏</div>
+		<!-- <img src="images/img.jpg" id="imgId"> -->
+		<div id="dd">多朵</div>
+		<div id="love">love</div>
+	</div>
+	<script type="text/javascript">
+	var superMen = document.getElementById('imgId');
+	var dd = document.getElementById('dd');
+	var X =0; 
+	var Y =0;
+	var leaderX = 0;
+    var leaderY = 0;
+	var X1 =0; 
+	var Y1 =0;    
+	var leaderX1 = 0;
+    var leaderY1 = 0;
+	var X2 =0; 
+	var Y2 =0;
+    var leaderX2 = 0;
+    var leaderY2 = 0;
+		document.onmousedown = function (event) {
+			// body...
+			var event = event || window.event;
+			X = event.clientX - 0;
+			Y = event.clientY - 0;
+		}
+		document.onmouseup = function (event) {
+			// body...
+			var event = event || window.event;
+			X1 = event.clientX - 65;
+			Y1 = event.clientY - 0;
+		}
+		document.onclick = function (event) {
+			// body...
+			var event = event || window.event;
+			X2 = event.clientX - 10;
+			Y2 = event.clientY + 10;
+		}
+            setInterval(function () {
+            	// body...                
+                leaderX = leaderX + (X - leaderX ) / 10;
+                leaderY = leaderY + (Y - leaderY ) / 10;
+                superMen.style.left = leaderX + "px";
+                superMen.style.top = leaderY + "px";
+
+                leaderX1 = leaderX1 + (X1 - leaderX1 ) / 10;
+                leaderY1 = leaderY1 + (Y1 - leaderY1 ) / 10;
+                dd.style.left = leaderX1 + "px";
+                dd.style.top = leaderY1 + "px";
+
+                leaderX2 = leaderX2 + (X2 - leaderX2 ) / 100;
+                leaderY2 = leaderY2 + (Y2 - leaderY2 ) / 100;
+                love.style.left = leaderX2 + "px";
+                love.style.top = leaderY2 + "px";
+            
+            },10)
+	
+	</script>
+</body>
+</html>
